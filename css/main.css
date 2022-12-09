@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(257deg, 40%, 49%);
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+.grid-container {
+  width: 100vw;
+  max-width: 1400px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 2.3fr 3fr 1fr;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.grid-container .logo {
+  position: relative;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  width: 150px;
+}
+.grid-container .illustration {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+}
+.grid-container .main {
+  padding: 0 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.grid-container .main h1 {
+  font-size: 2.6rem;
+}
+.grid-container .main p {
+  margin-top: -20px;
+  color: rgb(215, 197, 218);
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+.grid-container .main button {
+  width: 225px;
+  padding: 15px;
+  color: hsl(257deg, 40%, 49%);
+  background: none;
+  background-color: white;
+  border: none;
+  border-radius: 50vh;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0px 3px 5px #424242;
+  cursor: pointer;
+}
+.grid-container .footer {
+  display: flex;
+  justify-content: center;
+}
+.grid-container .footer .icon-flex,
+.grid-container .footer .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container .footer .icon-wrapper {
+  margin: 0 7px;
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.grid-container .footer .icon-wrapper i {
+  color: white;
+}
+
+@media (min-width: 576px) {
+  .illustration {
+    max-width: 550px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: contain;
+  }
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 4fr 1fr;
+  }
+  .grid-container .logo {
+    left: 15%;
+    width: 200px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .grid-container .illustration {
+    max-width: none;
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .grid-container .main {
+    position: relative;
+    padding-left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75%;
+    align-items: start;
+    text-align: left;
+    grid-column: 3/5;
+    grid-row: 2/3;
+  }
+  .grid-container .main h1 {
+    font-size: 3.2rem;
+  }
+  .grid-container .main p {
+    font-size: 2rem;
+  }
+  .grid-container .main button {
+    width: 200px;
+    font-size: 1.6rem;
+    transition: color 0.2s, background-color 0.2s;
+  }
+  .grid-container .main button:hover {
+    color: white;
+    background-color: hsl(300deg, 69%, 71%);
+  }
+  .grid-container .footer {
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+  .grid-container .footer .icon-wrapper {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .grid-container .footer i {
+    transition: color 0.2s, transform 0.2s;
+  }
+  .grid-container .footer .icon-wrapper:hover i, .grid-container .footer .icon-wrapper:hover {
+    color: hsl(300deg, 69%, 71%);
+    border-color: hsl(300deg, 69%, 71%);
+    transform: scale(1.1);
+  }
+}
+@media (min-width: 1400px) {
+  .grid-container .main {
+    position: relative;
+    padding-left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75%;
+    align-items: start;
+    text-align: left;
+    grid-column: 3/5;
+    grid-row: 2/3;
+  }
+  .grid-container .main h1 {
+    max-width: 680px;
+    font-size: 5.3rem;
+  }
+  .grid-container .main p {
+    max-width: 680px;
+    font-size: 2.4rem;
+  }
+  .grid-container .main button {
+    width: 200px;
+    font-size: 1.6rem;
+    transition: color 0.2s, background-color 0.2s;
+  }
+  .grid-container .main button:hover {
+    color: white;
+    background-color: hsl(300deg, 69%, 71%);
+  }
+  .grid-container .footer .icon-wrapper {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .grid-container .footer i {
+    transition: color 0.2s, transform 0.2s;
+  }
+  .grid-container .footer .icon-wrapper:hover i, .grid-container .footer .icon-wrapper:hover {
+    color: hsl(300deg, 69%, 71%);
+    border-color: hsl(300deg, 69%, 71%);
+    transform: scale(1.1);
+  }
+}/*# sourceMappingURL=main.css.map */
