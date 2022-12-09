@@ -45,7 +45,7 @@ body {
   padding: 0 35px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -53,12 +53,13 @@ body {
   font-size: 2.6rem;
 }
 .grid-container .main p {
-  margin-top: -20px;
+  margin: 20px 0;
   color: rgb(215, 197, 218);
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
 }
 .grid-container .main button {
+  margin-top: 20px;
   width: 225px;
   padding: 15px;
   color: hsl(257deg, 40%, 49%);
@@ -157,54 +158,20 @@ body {
   .grid-container .footer i {
     transition: color 0.2s, transform 0.2s;
   }
-  .grid-container .footer .icon-wrapper:hover i, .grid-container .footer .icon-wrapper:hover {
+  .grid-container .footer .icon-wrapper:hover i,
+.grid-container .footer .icon-wrapper:hover {
     color: hsl(300deg, 69%, 71%);
     border-color: hsl(300deg, 69%, 71%);
     transform: scale(1.1);
   }
 }
 @media (min-width: 1400px) {
-  .grid-container .main {
-    position: relative;
-    padding-left: 100px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 75%;
-    align-items: start;
-    text-align: left;
-    grid-column: 3/5;
-    grid-row: 2/3;
-  }
   .grid-container .main h1 {
     max-width: 680px;
-    font-size: 5.3rem;
+    font-size: 4.5rem;
   }
   .grid-container .main p {
-    max-width: 680px;
-    font-size: 2.4rem;
-  }
-  .grid-container .main button {
-    width: 200px;
-    font-size: 1.6rem;
-    transition: color 0.2s, background-color 0.2s;
-  }
-  .grid-container .main button:hover {
-    color: white;
-    background-color: hsl(300deg, 69%, 71%);
-  }
-  .grid-container .footer .icon-wrapper {
-    width: 45px;
-    height: 45px;
-    font-size: 22px;
-    transition: border-color 0.2s, transform 0.2s;
-    cursor: pointer;
-  }
-  .grid-container .footer i {
-    transition: color 0.2s, transform 0.2s;
-  }
-  .grid-container .footer .icon-wrapper:hover i, .grid-container .footer .icon-wrapper:hover {
-    color: hsl(300deg, 69%, 71%);
-    border-color: hsl(300deg, 69%, 71%);
-    transform: scale(1.1);
+    max-width: 750px;
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
